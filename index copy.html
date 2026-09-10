@@ -106,8 +106,6 @@ a{text-decoration:none;color:inherit}
 .add-tool-btn{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--bg-card);border:2px dashed var(--border);border-radius:var(--r-md);padding:17px;font-size:12px;font-weight:600;color:var(--text-muted);cursor:pointer;transition:var(--tr);min-height:120px;}
 .add-tool-btn:hover{border-color:var(--accent-blue);color:var(--accent-blue);background:rgba(74,158,255,.05);transform:translateY(-2px);}
 .add-tool-btn span{font-size:20px}
-
-/* ── THREE DOT MENU for manual cards ── */
 .card-menu-wrap{position:relative;flex-shrink:0;}
 .card-three-dot{width:24px;height:24px;border-radius:5px;background:transparent;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:15px;color:var(--text-muted);transition:var(--tr);line-height:1;padding:0;}
 .card-three-dot:hover{background:var(--bg-card-hover);color:var(--text-primary);}
@@ -115,11 +113,7 @@ a{text-decoration:none;color:inherit}
 .card-dropdown.open{display:block;}
 .card-dropdown-item{display:flex;align-items:center;gap:8px;padding:10px 14px;font-size:12px;font-weight:600;color:var(--accent-red);cursor:pointer;transition:var(--tr);}
 .card-dropdown-item:hover{background:rgba(248,113,113,.1);}
-
-/* ── MANUAL BADGE ── */
 .manual-badge{position:absolute;top:8px;left:8px;font-size:8px;font-weight:700;background:rgba(167,139,250,.2);color:var(--accent-purple);border:1px solid rgba(167,139,250,.3);border-radius:10px;padding:1px 6px;letter-spacing:.4px;text-transform:uppercase;pointer-events:none;}
-
-/* ── CONFIRM DELETE MODAL ── */
 .confirm-overlay{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:600;display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(5px);opacity:0;pointer-events:none;transition:opacity .25s;}
 .confirm-overlay.open{opacity:1;pointer-events:all}
 .confirm-box{background:var(--bg-card);border:1px solid rgba(248,113,113,.3);border-radius:var(--r-md);padding:28px;width:100%;max-width:360px;box-shadow:var(--shadow-lg);transform:translateY(16px);transition:transform .25s;text-align:center;}
@@ -132,7 +126,6 @@ a{text-decoration:none;color:inherit}
 .confirm-cancel-btn:hover{border-color:var(--border-hover);color:var(--text-primary)}
 .confirm-delete-btn{padding:9px 22px;border-radius:6px;background:linear-gradient(135deg,var(--accent-red),#e05555);border:none;color:#fff;font-size:13px;font-weight:700;cursor:pointer;transition:var(--tr);}
 .confirm-delete-btn:hover{transform:translateY(-1px);box-shadow:0 4px 14px rgba(248,113,113,.35)}
-
 .t-blue{--ca:var(--accent-blue);--ci:rgba(74,158,255,.12);--cb:rgba(74,158,255,.08);--cc:rgba(74,158,255,.22)}
 .t-green{--ca:var(--accent-green);--ci:rgba(62,207,142,.12);--cb:rgba(62,207,142,.08);--cc:rgba(62,207,142,.22)}
 .t-purple{--ca:var(--accent-purple);--ci:rgba(167,139,250,.12);--cb:rgba(167,139,250,.08);--cc:rgba(167,139,250,.22)}
@@ -165,8 +158,6 @@ a{text-decoration:none;color:inherit}
 .footer span{color:var(--accent-dazn);font-weight:600}
 .anchor{scroll-margin-top:120px}
 .hidden{display:none!important}
-
-/* ADD TOOL MODAL */
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:500;display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px);opacity:0;pointer-events:none;transition:opacity .25s;}
 .modal-overlay.open{opacity:1;pointer-events:all}
 .modal{background:var(--bg-card);border:1px solid var(--border-hover);border-radius:var(--r-md);padding:28px;width:100%;max-width:480px;box-shadow:var(--shadow-lg);transform:translateY(20px);transition:transform .25s;max-height:90vh;overflow-y:auto;}
@@ -184,8 +175,6 @@ a{text-decoration:none;color:inherit}
 .modal-cancel:hover{border-color:var(--border-hover);color:var(--text-primary)}
 .modal-save{padding:8px 18px;border-radius:6px;background:var(--accent-blue);border:none;color:#fff;font-size:13px;font-weight:700;cursor:pointer;transition:var(--tr);}
 .modal-save:hover{background:#3a8eef;box-shadow:0 4px 12px rgba(74,158,255,.35)}
-
-/* PLAYBACK TAB */
 .pb-wrap{padding:24px 28px;min-height:calc(100vh - 110px);background:var(--bg-primary);}
 .pb-control-panel{background:var(--bg-secondary);border:1px solid var(--border);border-radius:var(--r-md);padding:20px 24px;margin-bottom:20px;}
 .pb-control-title{font-size:14px;font-weight:800;color:var(--text-primary);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
@@ -287,6 +276,332 @@ a{text-decoration:none;color:inherit}
 .pb-empty-sub{font-size:12.5px;color:var(--text-muted);max-width:400px;line-height:1.7;}
 @media(max-width:900px){.sidebar{display:none}.main{padding:18px 14px}.pb-wrap{padding:14px 12px}}
 @media(max-width:600px){.topnav{padding:0 14px}.nav-subtitle{display:none}.stats-bar{grid-template-columns:1fr 1fr}.page-header{flex-direction:column}.search-wrap{min-width:unset;width:100%}.tab-btn{padding:10px 10px;font-size:11px}.pb-control-grid{grid-template-columns:1fr 1fr}}
+
+/* ── MANIFEST PULLER STYLES ── */
+.tab-panel#tab-manifest {
+    --bg-primary-mp: #0d0f14;
+    --bg-secondary-mp: #13161e;
+    --bg-card-mp: #1a1e2a;
+    --bg-input-mp: #0d0f14;
+    --bg-deep-mp: #13161e;
+    --border-mp: #2a2f42;
+    --border-hover-mp: #3d4460;
+    --text-primary-mp: #e8eaf0;
+    --text-secondary-mp: #8b90a8;
+    --text-muted-mp: #555c78;
+    --accent-mp: var(--accent-yellow, #facc15);
+    --accent-dim-mp: rgba(250,204,21,0.08);
+    --accent-border-mp: rgba(250,204,21,0.22);
+    --border-focus-mp: var(--accent-yellow, #facc15);
+    --success-mp: #3ecf8e;
+    --success-dim-mp: rgba(62,207,142,0.1);
+    --error-mp: #f87171;
+    --error-dim-mp: rgba(248,113,113,0.1);
+    --warning-mp: #fb923c;
+    --info-mp: #4a9eff;
+    --info-dim-mp: rgba(74,158,255,0.1);
+    --purple-mp: #a78bfa;
+    --purple-dim-mp: rgba(167,139,250,0.1);
+    --radius-mp: 6px;
+    --radius-lg-mp: 10px;
+    --shadow-mp: 0 8px 32px rgba(0,0,0,0.6);
+    height: calc(100vh - 110px);
+    overflow: hidden;
+    background: var(--bg-primary-mp);
+    color: var(--text-primary-mp);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+.tab-panel#tab-manifest .app-header{
+    display:flex;align-items:center;gap:10px;
+    background:var(--bg-secondary-mp);
+    border-bottom:1px solid var(--border-mp);
+    padding:8px 16px;
+    height:auto;
+    position:static;
+    flex-shrink:0;
+}
+.tab-panel#tab-manifest .header-brand,
+.tab-panel#tab-manifest .header-badge { display: none; }
+.tab-panel#tab-manifest .header-controls{
+    display:flex;align-items:center;gap:10px;
+    padding:0; flex:1; overflow-x:auto; height:100%;
+}
+.tab-panel#tab-manifest .header-controls::-webkit-scrollbar{height:0}
+.tab-panel#tab-manifest .ctrl-group{display:flex;flex-direction:column;gap:3px;flex-shrink:0;}
+.tab-panel#tab-manifest .ctrl-label{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted-mp);}
+.tab-panel#tab-manifest .ctrl-input,.tab-panel#tab-manifest .ctrl-select,.tab-panel#tab-manifest .ctrl-textarea{
+    background:var(--bg-input-mp);border:1px solid var(--border-mp);border-radius:var(--radius-mp);
+    color:var(--text-primary-mp);font-family:inherit;font-size:12px;padding:5px 9px;outline:none;
+    transition:border-color 0.15s,box-shadow 0.15s;
+}
+.tab-panel#tab-manifest .ctrl-input:focus,.tab-panel#tab-manifest .ctrl-select:focus,.tab-panel#tab-manifest .ctrl-textarea:focus{
+    border-color:var(--border-focus-mp);box-shadow:0 0 0 2px rgba(250,204,21,0.12);
+}
+.tab-panel#tab-manifest .ctrl-select{
+    appearance:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='%23666' d='M5 7L1 3h8z'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:right 8px center;padding-right:24px;cursor:pointer;min-width:90px;
+}
+.tab-panel#tab-manifest .ctrl-select option{background:var(--bg-card-mp)}
+.tab-panel#tab-manifest .ctrl-textarea{
+    font-family:'Consolas','Courier New',monospace;font-size:11px;resize:none;
+    width:220px;height:36px;line-height:1.4;
+}
+.tab-panel#tab-manifest .ctrl-textarea::placeholder{color:var(--text-muted-mp);font-size:10px}
+.tab-panel#tab-manifest .profile-pills{display:flex;gap:4px}
+.tab-panel#tab-manifest .profile-pill{
+    padding:4px 10px;background:var(--bg-input-mp);border:1px solid var(--border-mp);
+    border-radius:20px;color:var(--text-secondary-mp);font-size:11px;font-weight:600;
+    cursor:pointer;transition:all 0.15s;white-space:nowrap;
+}
+.tab-panel#tab-manifest .profile-pill:hover{border-color:var(--border-hover-mp);color:var(--text-primary-mp)}
+.tab-panel#tab-manifest .profile-pill.active{
+    border-color:var(--accent-mp);background:var(--accent-dim-mp);color:var(--accent-mp);
+}
+.tab-panel#tab-manifest .generate-btn{
+    display:flex;align-items:center;gap:7px;padding:7px 18px;background:var(--accent-mp);
+    color:#000;border:none;border-radius:var(--radius-mp);font-size:12px;font-weight:800;
+    cursor:pointer;letter-spacing:0.3px;transition:all 0.15s;white-space:nowrap;flex-shrink:0;height:34px;
+}
+.tab-panel#tab-manifest .generate-btn:hover{background:#e8ef00;box-shadow:0 4px 16px rgba(250,204,21,0.25)}
+.tab-panel#tab-manifest .generate-btn:active{transform:scale(0.98)}
+.tab-panel#tab-manifest .generate-btn:disabled{background:var(--border-mp);color:var(--text-muted-mp);cursor:not-allowed;box-shadow:none}
+.tab-panel#tab-manifest .generate-btn .g-spinner{
+    width:13px;height:13px;border:2px solid rgba(0,0,0,0.25);
+    border-top-color:#000;border-radius:50%;animation:spin 0.6s linear infinite;display:none;
+}
+.tab-panel#tab-manifest .generate-btn.loading .g-spinner{display:block}
+@keyframes spin{to{transform:rotate(360deg)}}
+.tab-panel#tab-manifest .app-body{
+    height:calc(100% - 54px);overflow-y:auto;padding:20px;
+    display:flex;flex-direction:column;gap:16px;
+}
+.tab-panel#tab-manifest .app-body::-webkit-scrollbar{width:5px}
+.tab-panel#tab-manifest .app-body::-webkit-scrollbar-track{background:transparent}
+.tab-panel#tab-manifest .app-body::-webkit-scrollbar-thumb{background:var(--border-mp);border-radius:4px}
+.tab-panel#tab-manifest .empty-state{
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:14px;color:var(--text-muted-mp);text-align:center;padding:80px 40px;flex:1;
+}
+.tab-panel#tab-manifest .empty-icon{font-size:52px;opacity:0.2}
+.tab-panel#tab-manifest .empty-state h3{font-size:16px;color:var(--text-secondary-mp);font-weight:600}
+.tab-panel#tab-manifest .empty-state p{font-size:12px;max-width:340px;line-height:1.7;color:var(--text-muted-mp)}
+.tab-panel#tab-manifest .empty-state kbd{
+    background:var(--bg-card-mp);border:1px solid var(--border-mp);
+    border-radius:4px;padding:1px 6px;font-size:11px;
+    color:var(--text-secondary-mp);font-family:monospace;
+}
+.tab-panel#tab-manifest .results-bar{
+    display:flex;align-items:center;justify-content:space-between;padding:10px 14px;
+    background:var(--bg-card-mp);border:1px solid var(--border-mp);border-radius:var(--radius-lg-mp);flex-shrink:0;
+}
+.tab-panel#tab-manifest .results-bar-left{display:flex;align-items:center;gap:10px}
+.tab-panel#tab-manifest .results-count{font-size:13px;font-weight:700;color:var(--text-primary-mp)}
+.tab-panel#tab-manifest .results-meta-tags{display:flex;gap:6px}
+.tab-panel#tab-manifest .results-bar-right{display:flex;gap:6px}
+.tab-panel#tab-manifest .tag{
+    font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px;
+    letter-spacing:0.5px;text-transform:uppercase;
+}
+.tab-panel#tab-manifest .tag-headend{background:rgba(167,139,250,0.12);color:#c4b5fd;border:1px solid rgba(167,139,250,0.2)}
+.tab-panel#tab-manifest .tag-format{background:rgba(62,207,142,0.1);color:#86efac;border:1px solid rgba(62,207,142,0.18)}
+.tab-panel#tab-manifest .tag-profile{background:rgba(250,204,21,0.08);color:#e8ef00;border:1px solid rgba(250,204,21,0.18)}
+.tab-panel#tab-manifest .event-block{
+    background:var(--bg-card-mp);border:1px solid var(--border-mp);
+    border-radius:var(--radius-lg-mp);overflow:hidden;
+}
+.tab-panel#tab-manifest .event-block.has-error{border-color:rgba(239,68,68,0.25)}
+.tab-panel#tab-manifest .event-header{
+    display:flex;align-items:center;gap:10px;padding:12px 16px;
+    border-bottom:1px solid var(--border-mp);cursor:pointer;user-select:none;transition:background 0.12s;
+}
+.tab-panel#tab-manifest .event-header:hover{background:rgba(255,255,255,0.015)}
+.tab-panel#tab-manifest .event-id-badge{
+    background:var(--accent-dim-mp);
+    border:1px solid var(--accent-border-mp);
+    color:var(--accent-mp);
+    font-size:10px;font-weight:700;
+    padding:3px 8px;border-radius:5px;
+    font-family:monospace;letter-spacing:0.3px;
+    white-space:nowrap;flex-shrink:0;
+}
+.tab-panel#tab-manifest .event-id-badge.error-badge{
+    background:var(--error-dim-mp);
+    border-color:rgba(239,68,68,0.25);
+    color:var(--error-mp);
+}
+.tab-panel#tab-manifest .event-id-text{
+    font-size:12px;font-weight:600;
+    color:var(--text-primary-mp);
+    font-family:monospace;
+    flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.tab-panel#tab-manifest .event-header-meta{display:flex;align-items:center;gap:8px;margin-left:auto}
+.tab-panel#tab-manifest .status-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.tab-panel#tab-manifest .status-dot.loading{background:var(--warning-mp);animation:pulse 1s ease-in-out infinite}
+.tab-panel#tab-manifest .status-dot.success{background:var(--success-mp)}
+.tab-panel#tab-manifest .status-dot.error{background:var(--error-mp)}
+.tab-panel#tab-manifest .status-dot.partial{background:var(--warning-mp)}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.25}}
+.tab-panel#tab-manifest .chevron{color:var(--text-muted-mp);font-size:11px;transition:transform 0.2s;flex-shrink:0}
+.tab-panel#tab-manifest .chevron.open{transform:rotate(180deg)}
+.tab-panel#tab-manifest .event-body{display:none;flex-direction:column;gap:0}
+.tab-panel#tab-manifest .event-body.open{display:flex}
+.tab-panel#tab-manifest .url-row{
+    display:flex;align-items:center;gap:8px;
+    padding:10px 16px;
+    background:var(--bg-deep-mp);
+    border-bottom:1px solid var(--border-mp);
+}
+.tab-panel#tab-manifest .url-label{
+    font-size:9px;font-weight:700;text-transform:uppercase;
+    letter-spacing:0.8px;color:var(--text-muted-mp);white-space:nowrap;
+}
+.tab-panel#tab-manifest .url-text{
+    flex:1;font-family:'Consolas','Courier New',monospace;
+    font-size:11px;color:#7dd3fc;
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+    cursor:text;user-select:all;
+}
+.tab-panel#tab-manifest .url-actions{display:flex;gap:5px;flex-shrink:0}
+.tab-panel#tab-manifest .manifest-tabs-wrapper{display:flex;flex-direction:column}
+.tab-panel#tab-manifest .manifest-tab-bar{
+    display:flex;align-items:center;gap:0;
+    border-bottom:1px solid var(--border-mp);
+    background:var(--bg-deep-mp);
+    padding:0 16px;
+    overflow-x:auto;
+}
+.tab-panel#tab-manifest .manifest-tab-bar::-webkit-scrollbar{height:0}
+.tab-panel#tab-manifest .manifest-tab{
+    display:flex;align-items:center;gap:6px;
+    padding:9px 14px;
+    font-size:11px;font-weight:600;
+    color:var(--text-muted-mp);
+    cursor:pointer;
+    border-bottom:2px solid transparent;
+    transition:all 0.15s;
+    white-space:nowrap;
+    user-select:none;
+}
+.tab-panel#tab-manifest .manifest-tab:hover{color:var(--text-secondary-mp)}
+.tab-panel#tab-manifest .manifest-tab.active{color:var(--text-primary-mp);border-bottom-color:var(--accent-mp)}
+.tab-panel#tab-manifest .manifest-tab .tab-dot{
+    width:6px;height:6px;border-radius:50%;
+    background:var(--text-muted-mp);
+    transition:background 0.15s;
+}
+.tab-panel#tab-manifest .manifest-tab.active .tab-dot{background:var(--accent-mp)}
+.tab-panel#tab-manifest .manifest-tab.tab-loading .tab-dot{background:var(--warning-mp);animation:pulse 1s ease-in-out infinite}
+.tab-panel#tab-manifest .manifest-tab.tab-error .tab-dot{background:var(--error-mp)}
+.tab-panel#tab-manifest .manifest-tab.tab-success .tab-dot{background:var(--success-mp)}
+.tab-panel#tab-manifest .manifest-panel{display:none;flex-direction:column}
+.tab-panel#tab-manifest .manifest-panel.active{display:flex}
+.tab-panel#tab-manifest .manifest-toolbar{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:8px 16px;
+    background:var(--bg-secondary-mp);
+    border-bottom:1px solid var(--border-mp);
+}
+.tab-panel#tab-manifest .manifest-toolbar-left{display:flex;align-items:center;gap:10px}
+.tab-panel#tab-manifest .manifest-type-label{
+    font-size:10px;font-weight:700;text-transform:uppercase;
+    letter-spacing:0.8px;color:var(--text-muted-mp);
+}
+.tab-panel#tab-manifest .manifest-stats{display:flex;gap:8px}
+.tab-panel#tab-manifest .manifest-stat{
+    font-size:10px;color:var(--text-muted-mp);
+    background:var(--bg-input-mp);
+    border:1px solid var(--border-mp);
+    border-radius:4px;padding:1px 7px;
+}
+.tab-panel#tab-manifest .manifest-toolbar-right{display:flex;gap:5px}
+.tab-panel#tab-manifest .manifest-viewer{
+    position:relative;
+    background:var(--bg-primary-mp);
+}
+.tab-panel#tab-manifest .manifest-pre{
+    padding:14px 16px;
+    font-family:'Consolas','Courier New',monospace;
+    font-size:11.5px;line-height:1.75;
+    color:#ccc;
+    overflow-x:auto;overflow-y:auto;
+    white-space:pre;
+    max-height:380px;
+    transition:max-height 0.3s ease;
+}
+.tab-panel#tab-manifest .manifest-pre.expanded{max-height:75vh}
+.tab-panel#tab-manifest .manifest-pre::-webkit-scrollbar{width:5px;height:5px}
+.tab-panel#tab-manifest .manifest-pre::-webkit-scrollbar-track{background:transparent}
+.tab-panel#tab-manifest .manifest-pre::-webkit-scrollbar-thumb{background:#2a2f42;border-radius:4px}
+.tab-panel#tab-manifest .hl-tag{color:#c084fc}
+.tab-panel#tab-manifest .hl-url{color:#7dd3fc}
+.tab-panel#tab-manifest .hl-num{color:#fbbf24}
+.tab-panel#tab-manifest .hl-comment{color:#555c78;font-style:italic}
+.tab-panel#tab-manifest .hl-attr{color:#86efac}
+.tab-panel#tab-manifest .hl-xml-tag{color:#c084fc}
+.tab-panel#tab-manifest .hl-xml-attr{color:#86efac}
+.tab-panel#tab-manifest .hl-xml-val{color:#fbbf24}
+.tab-panel#tab-manifest .skeleton{
+    background:linear-gradient(90deg, #1a1e2a 25%, #1f2435 50%, #1a1e2a 75%);
+    background-size:200% 100%;
+    animation:shimmer 1.4s infinite;
+    border-radius:3px;height:11px;
+}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+.tab-panel#tab-manifest .skeleton-block{padding:14px 16px;display:flex;flex-direction:column;gap:9px}
+.tab-panel#tab-manifest .error-block{
+    display:flex;align-items:flex-start;gap:10px;
+    padding:14px 16px;
+    background:var(--error-dim-mp);
+    border-top:1px solid rgba(239,68,68,0.15);
+}
+.tab-panel#tab-manifest .error-icon{font-size:15px;flex-shrink:0;margin-top:1px}
+.tab-panel#tab-manifest .error-msg{font-size:11.5px;color:#fca5a5;line-height:1.6}
+.tab-panel#tab-manifest .error-msg strong{display:block;color:var(--error-mp);margin-bottom:3px;font-size:12px}
+.tab-panel#tab-manifest .action-btn{
+    padding:4px 10px;
+    background:transparent;
+    border:1px solid var(--border-mp);
+    border-radius:5px;
+    color:var(--text-secondary-mp);
+    font-size:10px;font-weight:600;
+    cursor:pointer;
+    transition:all 0.15s;
+    white-space:nowrap;
+    letter-spacing:0.3px;
+}
+.tab-panel#tab-manifest .action-btn:hover{border-color:var(--accent-mp);color:var(--accent-mp);background:var(--accent-dim-mp)}
+.tab-panel#tab-manifest .action-btn.copied{border-color:var(--success-mp);color:var(--success-mp);background:var(--success-dim-mp)}
+.tab-panel#tab-manifest .action-btn.dl{border-color:rgba(56,189,248,0.3);color:var(--info-mp)}
+.tab-panel#tab-manifest .action-btn.dl:hover{border-color:var(--info-mp);background:var(--info-dim-mp)}
+.tab-panel#tab-manifest .icon-btn{
+    padding:5px 11px;
+    background:var(--bg-input-mp);
+    border:1px solid var(--border-mp);
+    border-radius:5px;
+    color:var(--text-secondary-mp);
+    font-size:11px;
+    cursor:pointer;
+    transition:all 0.15s;
+    white-space:nowrap;
+}
+.tab-panel#tab-manifest .icon-btn:hover{border-color:var(--accent-mp);color:var(--accent-mp);background:var(--accent-dim-mp)}
+.toast-container{
+    position:fixed;bottom:20px;right:20px;
+    display:flex;flex-direction:column;gap:7px;z-index:9999;
+}
+.toast{
+    padding:9px 14px;border-radius:var(--r-sm);
+    font-size:12px;font-weight:500;
+    display:flex;align-items:center;gap:8px;
+    animation:toastIn 0.25s ease;
+    box-shadow:var(--shadow-md);max-width:320px;
+}
+.toast.success{background:rgba(62,207,142,0.12);border:1px solid rgba(62,207,142,0.25);color:#86efac}
+.toast.error{background:rgba(248,113,113,0.12);border:1px solid rgba(248,113,113,0.25);color:#fca5a5}
+.toast.info{background:var(--accent-dim-mp);border:1px solid var(--accent-border-mp);color:var(--accent-mp)}
+@keyframes toastIn{from{transform:translateX(110%);opacity:0}to{transform:translateX(0);opacity:1}}
 </style>
 </head>
 <body>
@@ -314,6 +629,9 @@ a{text-decoration:none;color:inherit}
   </button>
   <button class="tab-btn" id="tab-btn-playback" onclick="switchTab('playback',this)">
     <span class="tab-icon">▶️</span> Playback Dashboard
+  </button>
+  <button class="tab-btn" id="tab-btn-manifest" onclick="switchTab('manifest',this)">
+    <span class="tab-icon">📄</span> Manifest Puller
   </button>
 </div>
 
@@ -356,8 +674,7 @@ a{text-decoration:none;color:inherit}
     <div class="stat-card"><div class="stat-ico" style="background:rgba(248,113,113,.12)">🖥️</div><div><div class="stat-val">8</div><div class="stat-lbl">Wall Screens</div></div></div>
   </div>
   <div class="notice">
-    <span style="font-size:15px;flex-shrink:0">💡</span>
-    <span>Chrome tabs auto-cycle every <strong>15 seconds</strong> on wall-mount screens. Use <strong>➕ Add Tool</strong> in any section to add new tools persistently.</span>
+    <span style="font-size:15px;flex-shrink:0">💡</span><span>Chrome tabs auto-cycle every <strong>15 seconds</strong> on wall-mount screens. Use <strong>➕ Add Tool</strong> in any section to add new tools persistently.</span>
   </div>
 
   <!-- M2A -->
@@ -551,6 +868,68 @@ a{text-decoration:none;color:inherit}
 </div>
 </div><!-- end tab-playback -->
 
+<!-- TAB 3 — MANIFEST PULLER -->
+<div class="tab-panel" id="tab-manifest">
+    <header class="app-header">
+      <div class="header-controls">
+        <div class="ctrl-group">
+          <div class="ctrl-label">Event IDs</div>
+          <textarea
+            id="mpEventIdInput"
+            class="ctrl-textarea"
+            placeholder="One per line or comma-separated…"
+            title="Enter Event IDs — one per line or comma-separated. Ctrl+Enter to generate."
+          ></textarea>
+        </div>
+        <div class="ctrl-group">
+          <div class="ctrl-label">Headend</div>
+          <select id="mpHeadendSelect" class="ctrl-select" onchange="mp_onHeadendChange()">
+            <option value="DCA">DCA</option>
+            <option value="DCB">DCB</option>
+            <option value="DCG">DCG</option>
+            <option value="DCH">DCH</option>
+          </select>
+        </div>
+        <div class="ctrl-group">
+          <div class="ctrl-label">Format</div>
+          <select id="mpFormatSelect" class="ctrl-select">
+            <option value="HLS">HLS</option>
+            <option value="DASH">DASH</option>
+            <option value="Smooth" id="mpSmoothOption">Smooth</option>
+          </select>
+        </div>
+        <div class="ctrl-group">
+          <div class="ctrl-label">Profile</div>
+          <div class="profile-pills">
+            <button class="profile-pill active" data-profile="all" onclick="mp_selectProfile(this)">Default</button>
+            <button class="profile-pill" data-profile="hevc-all" onclick="mp_selectProfile(this)">hevc-all</button>
+            <button class="profile-pill" data-profile="hevc-hdr-all" onclick="mp_selectProfile(this)">hevc-hdr-all</button>
+          </div>
+        </div>
+        <div class="ctrl-group" style="justify-content:flex-end">
+          <div class="ctrl-label">&nbsp;</div>
+          <button class="generate-btn" id="mpGenerateBtn" onclick="mp_generateManifests()">
+            <div class="g-spinner" id="mpBtnSpinner"></div>
+            <span id="mpBtnText">⚡ Generate</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="app-body" id="mpAppBody">
+      <div class="empty-state" id="mpEmptyState">
+        <div class="empty-icon">📄</div>
+        <h3>No Manifests Generated</h3>
+        <p>
+          Enter one or more Event IDs, choose your Headend, Format and Profile,
+          then click <strong>Generate</strong>.<br/><br/>
+          Press <kbd>Ctrl+Enter</kbd> inside the Event ID box to generate quickly.
+        </p>
+      </div>
+    </main>
+    <div class="toast-container" id="mpToastContainer"></div>
+</div><!-- end tab-manifest -->
+
+
 <!-- ADD TOOL MODAL -->
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal">
@@ -633,14 +1012,13 @@ document.getElementById('themeBtn').addEventListener('click',()=>{
 });
 
 // ═══════════════════════════════════════════
-// TAB SWITCHING — persistent (FIX #3)
+// TAB SWITCHING — persistent
 // ═══════════════════════════════════════════
 function switchTab(tab, btn){
   document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
   document.getElementById('tab-'+tab).classList.add('active');
   if(btn) btn.classList.add('active');
-  // Save active tab to localStorage
   localStorage.setItem(LS_ACTIVE_TAB, tab);
   if(tab==='playback') checkSharedSession();
 }
@@ -697,7 +1075,7 @@ const observer = new IntersectionObserver((entries)=>{
 sections.forEach(s=>observer.observe(s));
 
 // ═══════════════════════════════════════════
-// MANUAL TOOLS — localStorage helpers (FIX #1)
+// MANUAL TOOLS — localStorage helpers
 // ═══════════════════════════════════════════
 function getManualTools(){
   try{ return JSON.parse(localStorage.getItem(LS_MANUAL_TOOLS)||'[]'); }
@@ -741,7 +1119,7 @@ document.getElementById('modalOverlay').addEventListener('click',function(e){
 });
 
 // ═══════════════════════════════════════════
-// SAVE CARD — saves to localStorage + renders (FIX #1)
+// SAVE CARD — saves to localStorage + renders
 // ═══════════════════════════════════════════
 function saveCard(){
   const name   = document.getElementById('modalName').value.trim();
@@ -757,7 +1135,6 @@ function saveCard(){
   const url2     = document.getElementById('modalUrl2').value.trim();
   const label2   = document.getElementById('modalLinkLabel2').value.trim();
 
-  // Generate unique ID
   const toolId = 'tool_' + Date.now() + '_' + Math.random().toString(36).substr(2,6);
 
   const toolData = {
@@ -768,12 +1145,10 @@ function saveCard(){
     url1, label1, url2, label2
   };
 
-  // FIX #1: Save to localStorage FIRST
   const tools = getManualTools();
   tools.push(toolData);
   saveManualTools(tools);
 
-  // Then render the card
   renderManualCard(toolData);
 
   const totalEl = document.getElementById('totalLinks');
@@ -784,10 +1159,9 @@ function saveCard(){
 }
 
 // ═══════════════════════════════════════════
-// RENDER MANUAL CARD — builds card HTML with 3-dot menu (FIX #2)
+// RENDER MANUAL CARD — builds card HTML with 3-dot menu
 // ═══════════════════════════════════════════
 function renderManualCard(tool){
-  // Prevent duplicate
   if(document.getElementById('card-'+tool.id)) return;
 
   let btnHtml = '';
@@ -831,12 +1205,11 @@ function renderManualCard(tool){
 }
 
 // ═══════════════════════════════════════════
-// RESTORE MANUAL TOOLS on page load (FIX #1)
+// RESTORE MANUAL TOOLS on page load
 // ═══════════════════════════════════════════
 function restoreManualTools(){
   const tools = getManualTools();
   tools.forEach(tool => renderManualCard(tool));
-  // Update total links count
   const totalEl = document.getElementById('totalLinks');
   if(totalEl && tools.length > 0){
     totalEl.textContent = parseInt(totalEl.textContent) + tools.length;
@@ -848,20 +1221,18 @@ function restoreManualTools(){
 // ═══════════════════════════════════════════
 function toggleCardMenu(e, menuId){
   e.stopPropagation();
-  // Close all other open menus
   document.querySelectorAll('.card-dropdown.open').forEach(m=>{
     if(m.id !== menuId) m.classList.remove('open');
   });
   const menu = document.getElementById(menuId);
   if(menu) menu.classList.toggle('open');
 }
-// Close menus on outside click
 document.addEventListener('click',()=>{
   document.querySelectorAll('.card-dropdown.open').forEach(m=>m.classList.remove('open'));
 });
 
 // ═══════════════════════════════════════════
-// DELETE TOOL — confirm then remove (FIX #2)
+// DELETE TOOL — confirm then remove
 // ═══════════════════════════════════════════
 let pendingDeleteId   = null;
 let pendingDeleteName = '';
@@ -872,7 +1243,6 @@ function promptDeleteTool(toolId, toolName){
   document.getElementById('confirm-title').textContent = 'Remove Tool?';
   document.getElementById('confirm-sub').textContent   = `"${toolName}" will be permanently removed from the dashboard.`;
   document.getElementById('confirmOverlay').classList.add('open');
-  // Close dropdown
   document.querySelectorAll('.card-dropdown.open').forEach(m=>m.classList.remove('open'));
 }
 function closeConfirm(){
@@ -882,13 +1252,10 @@ function closeConfirm(){
 }
 function executeConfirm(){
   if(!pendingDeleteId) return;
-  // FIX #2: Remove from localStorage FIRST
   const tools = getManualTools().filter(t => t.id !== pendingDeleteId);
   saveManualTools(tools);
-  // Then remove from DOM immediately
   const card = document.getElementById('card-'+pendingDeleteId);
   if(card) card.remove();
-  // Update total links count
   const totalEl = document.getElementById('totalLinks');
   if(totalEl) totalEl.textContent = Math.max(0, parseInt(totalEl.textContent)-1);
   closeConfirm();
@@ -899,7 +1266,7 @@ document.getElementById('confirmOverlay').addEventListener('click',function(e){
 });
 
 // ═══════════════════════════════════════════
-// PLAYBACK — SAVE STATE (FIX #3)
+// PLAYBACK — SAVE STATE
 // ═══════════════════════════════════════════
 function savePBState(){
   const state = {
@@ -925,7 +1292,7 @@ function savePBState(){
 }
 
 // ═══════════════════════════════════════════
-// PLAYBACK — RESTORE STATE (FIX #3)
+// PLAYBACK — RESTORE STATE
 // ═══════════════════════════════════════════
 function restorePBState(){
   try{
@@ -945,7 +1312,6 @@ function restorePBState(){
     if(s.muteAll)        { document.getElementById('pb-mute-all').checked       = s.muteAll; }
     if(s.input)          { document.getElementById('pb-input').value            = s.input; }
 
-    // Restore generated entries
     const savedEntries = localStorage.getItem(LS_PB_ENTRIES);
     if(savedEntries){
       generatedEntries = JSON.parse(savedEntries);
@@ -957,7 +1323,6 @@ function restorePBState(){
           document.getElementById('pb-mv-controls').style.display = 'flex';
           document.getElementById('pb-stop-btn').style.display    = 'inline-flex';
           applyGridLayout();
-          // Restart playback tiles
           setTimeout(()=>startPlayback(), 600);
         }
       }
@@ -1002,8 +1367,8 @@ const URL_TEMPLATES = {
   DCH:{HLS:'https://live-live-dazn-az-dch-prda.westeurope-3.streaming.mediakind.com/cmaf/{EVENT_ID}/index.m3u8',DASH:'https://live-live-dazn-az-dch-prda.westeurope-3.streaming.mediakind.com/cmaf/{EVENT_ID}/manifest.mpd',Smooth:null}
 };
 const SUPPRESSED_TEMPLATES = {
-  DCG:{HLS:`https://dazn-dcg-prda.uksouth-3.streaming.mediakind.com/{EVENT_ID}-clear/$${HARDCODED_TOKEN}/all/stream.m3u8`,DASH:`https://dazn-dcg-prda.uksouth-3.streaming.mediakind.com/{EVENT_ID}-clear/$${HARDCODED_TOKEN}/all/stream.mpd`},
-  DCH:{HLS:`https://live-live-dazn-az-dch-prda.westeurope-3.streaming.mediakind.com/{EVENT_ID}-clear/$${HARDCODED_TOKEN}/all/stream.m3u8`,DASH:`https://live-live-dazn-az-dch-prda.westeurope-3.streaming.mediakind.com/{EVENT_ID}-clear/$${HARDCODED_TOKEN}/all/stream.mpd`}
+  DCG:{HLS:`https://dazn-dcg-prda.uksouth-3.streaming.mediakind.com/{EVENT_ID}-clear/${HARDCODED_TOKEN}/all/stream.m3u8`,DASH:`https://dazn-dcg-prda.uksouth-3.streaming.mediakind.com/{EVENT_ID}-clear/${HARDCODED_TOKEN}/all/stream.mpd`},
+  DCH:{HLS:`https://live-live-dazn-az-dch-prda.westeurope-3.streaming.mediakind.com/{EVENT_ID}-clear/${HARDCODED_TOKEN}/all/stream.m3u8`,DASH:`https://live-live-dazn-az-dch-prda.westeurope-3.streaming.mediakind.com/{EVENT_ID}-clear/${HARDCODED_TOKEN}/all/stream.mpd`}
 };
 
 // ═══════════════════════════════════════════
@@ -1060,7 +1425,7 @@ function generateURLs(){
   document.getElementById('pb-table-wrap').style.display = 'block';
   document.getElementById('pb-play-btn').disabled = false;
   savePBState();
-  showToast(`✅ ${generatedEntries.length} URLs generated successfully!`);
+  showToast('✅ URLs generated successfully!', 'success');
 }
 function syncLayoutInputs(){
   const r=document.getElementById('pb-rows').value; const c=document.getElementById('pb-cols').value;
@@ -1096,7 +1461,7 @@ function applyTileSizeToGrid(val){
     const ratio=(h/w*100).toFixed(4)+'%';
     document.querySelectorAll('.pb-tile-video-wrap').forEach(wrap=>{ wrap.style.paddingTop=ratio; });
     const cols=parseInt(document.getElementById('mv-cols-live')?.value||document.getElementById('pb-cols').value)||3;
-    grid.style.gridTemplateColumns=`repeat(${cols},${w}px)`;
+    grid.style.gridTemplateColumns=`repeat($${cols},$${w}px)`;
   }
 }
 function startPlayback(){
@@ -1112,7 +1477,7 @@ function startPlayback(){
   });
   setupRefresh();
   savePBState();
-  showToast(`▶ Starting ${generatedEntries.length} streams…`);
+  showToast(`▶ Starting ${generatedEntries.length} streams…`, 'info');
 }
 function createTile(e){
   const tile=document.createElement('div');
@@ -1125,13 +1490,13 @@ function createTile(e){
   const safeUrl=e.url.replace(/'/g,"\\'");
   tile.innerHTML=`
     <div class="pb-tile-header">
-      <div class="pb-tile-title">📺 ${e.channel} | ${e.headend}<span class="pb-tile-badge ${fmtBadge}">${e.format}</span>${supBadge}</div>
+      <div class="pb-tile-title">📺 $${e.channel} | $${e.headend}<span class="pb-tile-badge $${fmtBadge}">$${e.format}</span>${supBadge}</div>
       <div class="pb-tile-controls">
-        <button class="pb-tile-btn" id="mute-btn-${e.idx}" onclick="toggleMuteTile(${e.idx})">🔊</button>
+        <button class="pb-tile-btn" id="mute-btn-$${e.idx}" onclick="toggleMuteTile($${e.idx})">🔊</button>
         <button class="pb-tile-btn" onclick="fullscreenTile(${e.idx})">⛶</button>
         <button class="pb-tile-btn" onclick="copyURL('${safeUrl}')">📋</button>
         <button class="pb-tile-btn" onclick="window.open('${safeUrl}','_blank')">↗</button>
-        <button class="pb-tile-btn" onclick="retryTile(${e.idx},'${safeUrl}')">🔄</button>
+        <button class="pb-tile-btn" onclick="retryTile($${e.idx},'$${safeUrl}')">🔄</button>
         <button class="pb-tile-btn" onclick="pinTile(${e.idx})">📌</button>
         <button class="pb-tile-btn" onclick="removeTile(${e.idx})" style="color:var(--accent-red)">✕</button>
       </div>
@@ -1144,7 +1509,7 @@ function createTile(e){
     </div>
     <div class="pb-tile-footer">
       <div class="pb-tile-status" id="status-${e.idx}"><div class="pb-tile-status-dot dot-yellow"></div><span style="color:var(--accent-dazn)">Loading…</span></div>
-      <div class="pb-tile-meta"><span class="pb-tile-latency" id="latency-${e.idx}">-- ms</span><span style="font-size:10px;color:var(--text-muted)">${e.eventId.substring(0,14)}…</span></div>
+      <div class="pb-tile-meta"><span class="pb-tile-latency" id="latency-$${e.idx}">-- ms</span><span style="font-size:10px;color:var(--text-muted)">$${e.eventId.substring(0,14)}…</span></div>
     </div>
     <div class="pb-tile-health-bar loading" id="hbar-${e.idx}"></div>`;
   tile.addEventListener('dragstart',ev=>{
@@ -1309,11 +1674,10 @@ function clearAll(){
   document.getElementById('suppressed-indicator').classList.remove('visible');
   document.getElementById('pb-suppressed').checked=false;
   generatedEntries=[];
-  // FIX #3: Only clearAll removes localStorage PB state
   localStorage.removeItem(LS_PB_STATE);
   localStorage.removeItem(LS_PB_ENTRIES);
   document.getElementById('pb-grid').innerHTML=`<div class="pb-empty"><div class="pb-empty-icon">▶️</div><div class="pb-empty-title">No Streams Playing</div><div class="pb-empty-sub">Paste your Channel Numbers &amp; Event IDs above, select Headend &amp; Format, then click <strong>⚡ Generate Playback URLs</strong> followed by <strong>▶ Start Playback</strong>.</div></div>`;
-  showToast('🗑️ Playback cleared!');
+  showToast('🗑️ Playback cleared!', 'info');
 }
 function filterTiles(query){
   const q=query.toLowerCase().trim();
@@ -1327,22 +1691,22 @@ function setupRefresh(){
   if(refreshTimer){ clearInterval(refreshTimer); refreshTimer=null; }
   const secs=parseInt(document.getElementById('pb-refresh').value)||0;
   if(secs===0) return;
-  refreshTimer=setInterval(()=>{ generatedEntries.forEach(e=>retryTile(e.idx,e.url)); showToast('🔄 Streams refreshed'); },secs*1000);
+  refreshTimer=setInterval(()=>{ generatedEntries.forEach(e=>retryTile(e.idx,e.url)); showToast('🔄 Streams refreshed', 'info'); },secs*1000);
 }
 function exportCSV(){
   if(!generatedEntries.length){ alert('Generate URLs first.'); return; }
-  const rows=generatedEntries.map(e=>`${e.channel},${e.url}`);
+  const rows=generatedEntries.map(e=>`$${e.channel},$${e.url}`);
   const blob=new Blob([rows.join('\n')],{type:'text/csv'});
   const a=document.createElement('a');
   a.href=URL.createObjectURL(blob);
   a.download=`dazn-playback-${new Date().toISOString().slice(0,10)}.csv`;
   a.click(); URL.revokeObjectURL(a.href);
-  showToast('📥 CSV exported successfully!');
+  showToast('📥 CSV exported successfully!', 'success');
 }
 function copyURL(url){
-  navigator.clipboard.writeText(url).then(()=>showToast('📋 URL copied to clipboard!')).catch(()=>{
+  navigator.clipboard.writeText(url).then(()=>showToast('📋 URL copied to clipboard!', 'success')).catch(()=>{
     const ta=document.createElement('textarea'); ta.value=url; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta);
-    showToast('📋 URL copied!');
+    showToast('📋 URL copied!', 'success');
   });
 }
 function copyAllURLs(){ if(!generatedEntries.length) return; copyURL(generatedEntries.map(e=>e.url).join('\n')); }
@@ -1362,7 +1726,7 @@ function sharePlayback(){
   document.getElementById('share-url-input').value=shareURL;
   document.getElementById('share-box').style.display='block';
   document.getElementById('share-box').scrollIntoView({behavior:'smooth'});
-  showToast('🔗 Shareable link generated!');
+  showToast('🔗 Shareable link generated!', 'info');
 }
 function copyShareURL(){ copyURL(document.getElementById('share-url-input').value); }
 function checkSharedSession(){
@@ -1382,27 +1746,32 @@ function checkSharedSession(){
     if(data.entries&&data.entries.length){
       const lines=data.entries.map(e=>`${e.channel}\t${e.eventId}`).join('\n');
       document.getElementById('pb-input').value=lines;
-      showToast('🔗 Shared session loaded! Generating URLs…');
+      showToast('🔗 Shared session loaded! Generating URLs…', 'info');
       setTimeout(()=>{ generateURLs(); setTimeout(()=>startPlayback(),800); },600);
     }
   } catch(err){ console.warn('Invalid shared session:',err); }
 }
 
 // ═══════════════════════════════════════════
-// TOAST
+// TOAST (for Monitoring & Playback tabs)
 // ═══════════════════════════════════════════
-function showToast(msg){
-  let toast=document.getElementById('dz-toast');
-  if(!toast){
-    toast=document.createElement('div');
-    toast.id='dz-toast';
-    toast.style.cssText='position:fixed;bottom:28px;right:28px;z-index:9999;background:var(--accent-green);color:#fff;padding:10px 20px;border-radius:8px;font-size:13px;font-weight:700;box-shadow:0 4px 20px rgba(0,0,0,.4);opacity:0;transition:opacity .3s;pointer-events:none;max-width:320px;';
-    document.body.appendChild(toast);
-  }
-  toast.textContent=msg;
-  toast.style.opacity='1';
-  clearTimeout(toast._timer);
-  toast._timer=setTimeout(()=>{ toast.style.opacity='0'; },2800);
+function showToast(msg, type='info'){
+    const container = document.getElementById('mpToastContainer');
+    const toast = document.createElement('div');
+    const icons = { success:'✅', error:'❌', info:'💡' };
+    let toastClass = 'toast ';
+    if (type === 'success') toastClass += 'success';
+    else if (type === 'error') toastClass += 'error';
+    else toastClass += 'info';
+    toast.className = toastClass;
+    toast.innerHTML = `<span>$${icons[type]||'💡'}</span>$${escHtml(msg)}`;
+    container.appendChild(toast);
+    setTimeout(() => {
+        toast.style.transition = 'opacity 0.3s,transform 0.3s';
+        toast.style.opacity    = '0';
+        toast.style.transform  = 'translateX(110%)';
+        setTimeout(() => toast.remove(), 320);
+    }, 3200);
 }
 
 // ═══════════════════════════════════════════
@@ -1435,29 +1804,419 @@ function escHtml(str){
 })();
 
 // ═══════════════════════════════════════════
+// MANIFEST PULLER LOGIC (UNMODIFIED)
+// ═══════════════════════════════════════════
+const mp_DCG_TOKEN = 'aHA5ZHpwc2NlOW5meXMwcmlteGFzZ3phOW15bmt0ZmRuYWEyaTI1MDlzMGttaXNmM2RvdzlodTN0YjQ5b3ZwZnA5Z2JvYmI2ZGoxZXo3djcwdDU5YjF5cjE1NzRseTNzN3NvYzNucHA1ZXJvZThvYnBvbWxqcmZjbDRvbzJ1dXA=';
+const mp_DCH_TOKEN = 'aHA5ZHpwc2NlOW5meXMwcmlteGFzZ3phOW15bmt0ZmRuYWEyaTI1MDlzMGttaXNmM2RvdzlodTN0YjQ5b3ZwZnA5Z2JvYmI2ZGoxZXo3djcwdDU5YjF5cjE1NzRseTNzN3NvYzNucHA1ZXJvZThvYnBvbWxqcmZjbDRvbzJ1dXA=';
+
+const mp_URL_TEMPLATES = {
+  DCA:{
+    HLS:   'https://m2a-dazn-preview-dca.m2amedia.services/{EVENT_ID}/{PROFILE}/stream.m3u8?outlet=global',
+    DASH:  'https://m2a-dazn-preview-dca.m2amedia.services/{EVENT_ID}/{PROFILE}/stream.mpd?outlet=global',
+    Smooth:'https://m2a-dazn-preview-dca.m2amedia.services/{EVENT_ID}/{PROFILE}/Manifest?outlet=global',
+  },
+  DCB:{
+    HLS:   'https://m2a-dazn-preview-dcb.m2amedia.services/{EVENT_ID}/{PROFILE}/stream.m3u8?outlet=global',
+    DASH:  'https://m2a-dazn-preview-dcb.m2amedia.services/{EVENT_ID}/{PROFILE}/stream.mpd?outlet=global',
+    Smooth:'https://m2a-dazn-preview-dcb.m2amedia.services/{EVENT_ID}/{PROFILE}/Manifest?outlet=global',
+  },
+  DCG:{
+    HLS: `https://dazn-dcg-prda.uksouth-3.streaming.mediakind.com/{EVENT_ID}-clear/${mp_DCG_TOKEN}/{PROFILE}/stream.m3u8`,
+    DASH:`https://dazn-dcg-prda.uksouth-3.streaming.mediakind.com/{EVENT_ID}-clear/${mp_DCG_TOKEN}/{PROFILE}/stream.mpd`,
+  },
+  DCH:{
+    HLS: `https://live-live-dazn-az-dch-prda.westeurope-3.streaming.mediakind.com/{EVENT_ID}-clear/${mp_DCH_TOKEN}/{PROFILE}/stream.m3u8`,
+    DASH:`https://live-live-dazn-az-dch-prda.westeurope-3.streaming.mediakind.com/{EVENT_ID}-clear/${mp_DCH_TOKEN}/{PROFILE}/stream.mpd`,
+  },
+};
+
+let mp_selectedProfile = 'all';
+const mp_manifestStore = {};
+
+function mp_onHeadendChange(){
+  const headend   = document.getElementById('mpHeadendSelect').value;
+  const fmtSel    = document.getElementById('mpFormatSelect');
+  const smoothOpt = document.getElementById('mpSmoothOption');
+  const noSmooth  = ['DCG','DCH'].includes(headend);
+  smoothOpt.disabled      = noSmooth;
+  smoothOpt.style.display = noSmooth ? 'none' : '';
+  if(noSmooth && fmtSel.value === 'Smooth') fmtSel.value = 'HLS';
+}
+
+function mp_selectProfile(btn){
+  document.querySelectorAll('#tab-manifest .profile-pill').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  mp_selectedProfile = btn.dataset.profile;
+}
+
+function mp_buildUrl(eventId, headend, format){
+  const template = mp_URL_TEMPLATES[headend]?.[format];
+  if(!template) return null;
+  return template
+    .replace('{EVENT_ID}', eventId.trim())
+    .replace('{PROFILE}',  mp_selectedProfile);
+}
+
+function mp_parseEventIds(raw){
+  return raw
+    .split(/[\n,]+/)
+    .map(id => id.trim())
+    .filter(id => id.length > 0);
+}
+
+async function mp_fetchManifest(url){
+  try{
+    const res = await fetch(url,{
+      method:'GET',
+      headers:{'Accept':'*/*'},
+      signal:AbortSignal.timeout(20000),
+    });
+    if(!res.ok) throw new Error(`HTTP ${res.status} — ${res.statusText}`);
+    const text = await res.text();
+    if(!text || text.trim().length === 0) throw new Error('Empty response received from server.');
+    return { ok:true, content:text, status:res.status };
+  } catch(err){
+    const isCors =
+      err.name === 'TypeError' ||
+      err.message.includes('Failed to fetch') ||
+      err.message.includes('NetworkError');
+    return {
+      ok:false,
+      content:null,
+      error: isCors
+        ? `CORS / Network Error: The manifest could not be fetched directly from the browser.\n\nURL: ${url}\n\nSuggestion: Deploy this tool behind a reverse proxy or server-side fetcher.\n\nOriginal: ${err.message}`
+        : `${err.message}\n\nURL: ${url}`,
+    };
+  }
+}
+
+function mp_resolveChildUrl(masterUrl, relativePath){
+  try{
+    const base     = masterUrl.split('?')[0];
+    const baseUrl  = new URL(base);
+    const basePath = baseUrl.pathname.substring(0, baseUrl.pathname.lastIndexOf('/') + 1);
+    const parts    = (basePath + relativePath).split('/');
+    const resolved = [];
+    for(const part of parts){
+      if(part === '..') resolved.pop();
+      else if(part !== '.') resolved.push(part);
+    }
+    return `${baseUrl.origin}${resolved.join('/')}`;
+  } catch(e){ return null; }
+}
+
+function mp_parseHlsChildren(masterContent, masterUrl){
+  const lines = masterContent.split('\n');
+  let videoRelative = null;
+  let audioRelative = null;
+
+  for(let i = 0; i < lines.length; i++){
+    const line = lines[i].trim();
+    if(!audioRelative && line.startsWith('#EXT-X-MEDIA') && line.includes('TYPE=AUDIO')){
+      const m = line.match(/URI="([^"]+)"/);
+      if(m) audioRelative = m[1];
+    }
+    if(!videoRelative && line.startsWith('#EXT-X-STREAM-INF')){
+      for(let j = i+1; j < lines.length; j++){
+        const next = lines[j].trim();
+        if(next.length > 0 && !next.startsWith('#')){ videoRelative = next; break; }
+      }
+    }
+    if(videoRelative && audioRelative) break;
+  }
+  return {
+    video: videoRelative ? mp_resolveChildUrl(masterUrl, videoRelative) : null,
+    audio: audioRelative ? mp_resolveChildUrl(masterUrl, audioRelative) : null,
+  };
+}
+
+function mp_prettyPrintXml(xmlStr){
+  if(xmlStr.indexOf('\n') !== -1) return xmlStr;
+  try{
+    const INDENT = '  ';
+    let formatted  = '';
+    let depth      = 0;
+    const tokens = xmlStr.split(/(<[^>]+>)/g);
+    for(let i = 0; i < tokens.length; i++){
+      const token = tokens[i].trim();
+      if(!token) continue;
+      if(token.startsWith('<?')){
+        formatted += token + '\n';
+      } else if(token.startsWith('<!--')){
+        formatted += INDENT.repeat(depth) + token + '\n';
+      } else if(token.startsWith('</')){
+        depth = Math.max(0, depth - 1);
+        formatted += INDENT.repeat(depth) + token + '\n';
+      } else if(token.startsWith('<') && token.endsWith('/>')){
+        formatted += INDENT.repeat(depth) + token + '\n';
+      } else if(token.startsWith('<')){
+        formatted += INDENT.repeat(depth) + token + '\n';
+        depth++;
+      } else {
+        const text = token.trim();
+        if(text){
+          formatted += INDENT.repeat(depth) + text + '\n';
+        }
+      }
+    }
+    return formatted.trimEnd();
+  } catch(e){
+    return xmlStr;
+  }
+}
+
+function mp_highlightManifest(text, format){
+  if(!text) return '';
+  const highlightHls = t => t.split('\n').map(l => {
+    const e = escHtml(l);
+    if(l.startsWith('#EXT')) return `<span class="hl-tag">${e}</span>`;
+    if(l.startsWith('#')) return `<span class="hl-comment">${e}</span>`;
+    if(/^https?:\/\//.test(l) || l.endsWith('.m3u8') || l.endsWith('.ts') || l.endsWith('.mp4') || l.endsWith('.cmfv') || l.endsWith('.cmfa')) return `<span class="hl-url">${e}</span>`;
+    if(/^\d+$/.test(l.trim())) return `<span class="hl-num">${e}</span>`;
+    return e;
+  }).join('\n');
+  const highlightXml = t => t.split('\n').map(l => {
+    const e = escHtml(l);
+    if(l.trim().startsWith('<?') || l.trim().startsWith('<!--')) return `<span class="hl-comment">${e}</span>`;
+    return e.replace(/(&lt;\/?[\w:.-]+)/g, '<span class="hl-xml-tag">$1</span>').replace(/([\w:.-]+=)(&quot;[^&]*&quot;)/g, '<span class="hl-xml-attr">$1</span><span class="hl-xml-val">$2</span>');
+  }).join('\n');
+
+  if(format === 'HLS') return highlightHls(text);
+  if(format === 'DASH' || format === 'Smooth') return highlightXml(mp_prettyPrintXml(text));
+  return escHtml(text);
+}
+
+function mp_downloadManifest(eventId, format, content, suffix){
+  const safeFmt = format.toUpperCase().replace(' ','_');
+  const safeSfx = suffix ? `_${suffix}` : '';
+  const filename = `${eventId}_${safeFmt}${safeSfx}.txt`;
+  const blob = new Blob([content], { type:'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  showToast(`Downloaded: ${filename}`, 'success');
+}
+
+async function mp_copyToClipboard(text, btn, label){
+  try{
+    await navigator.clipboard.writeText(text);
+    const orig = btn.textContent;
+    btn.textContent = '✓ Copied!';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = orig; btn.classList.remove('copied'); }, 2000);
+    showToast(`${label || 'Content'} copied to clipboard.`, 'success');
+  } catch(e){
+    showToast('Copy failed — please copy manually.', 'error');
+  }
+}
+
+function mp_getStats(content){
+  if(!content) return { lines: 0, size: '0 B' };
+  const lines = content.split('\n').length;
+  const bytes = new Blob([content]).size;
+  const size = bytes > 1024 ? `${(bytes/1024).toFixed(1)} KB` : `${bytes} B`;
+  return { lines, size };
+}
+
+function mp_buildManifestPanel(panelId, tabKey, eventId, format, result, isActive){
+  const storeKey = `${panelId}-${tabKey}`;
+  if(!result.ok){
+    return `<div class="manifest-panel ${isActive ? 'active' : ''}" id="panel-${panelId}-${tabKey}"><div class="error-block"><span class="error-icon">⚠️</span><div class="error-msg"><strong>Failed to retrieve manifest</strong>${escHtml(result.error)}</div></div></div>`;
+  }
+  mp_manifestStore[storeKey] = result.content;
+  const stats = mp_getStats(result.content);
+  const highlighted = mp_highlightManifest(result.content, format);
+  return `
+    <div class="manifest-panel ${isActive ? 'active' : ''}" id="panel-${panelId}-${tabKey}">
+      <div class="manifest-toolbar">
+        <div class="manifest-toolbar-left">
+          <span class="manifest-type-label">${tabKey.toUpperCase()}</span>
+          <div class="manifest-stats"><span class="manifest-stat">${stats.lines} lines</span><span class="manifest-stat">${stats.size}</span></div>
+        </div>
+        <div class="manifest-toolbar-right">
+          <button class="action-btn" onclick="mp_copyToClipboard(mp_manifestStore['${storeKey}'], this, '${tabKey} manifest')">⎘ Copy</button>
+          <button class="action-btn dl" onclick="mp_downloadManifest('${escHtml(eventId)}','${format}',mp_manifestStore['${storeKey}'],'${tabKey}')">↓ Download</button>
+          <button class="action-btn" onclick="mp_toggleExpand('mpre-${panelId}-${tabKey}', this)">⤢ Expand</button>
+        </div>
+      </div>
+      <div class="manifest-viewer"><pre class="manifest-pre" id="mpre-${panelId}-${tabKey}">${highlighted}</pre></div>
+    </div>`;
+}
+
+function mp_toggleExpand(preId, btn){
+  const pre = document.getElementById(preId);
+  if(!pre) return;
+  const expanded = pre.classList.toggle('expanded');
+  btn.textContent = expanded ? '⤡ Collapse' : '⤢ Expand';
+}
+
+function mp_switchTab(blockId, tabKey){
+  document.querySelectorAll(`#${blockId} .manifest-tab`).forEach(t => t.classList.remove('active'));
+  document.querySelectorAll(`#${blockId} .manifest-panel`).forEach(p => p.classList.remove('active'));
+  const tab = document.getElementById(`tab-${blockId}-${tabKey}`);
+  const panel = document.getElementById(`panel-${blockId}-${tabKey}`);
+  if(tab) tab.classList.add('active');
+  if(panel) panel.classList.add('active');
+}
+
+function mp_toggleBlock(blockId){
+  const body = document.getElementById(`body-${blockId}`);
+  const chevron = document.getElementById(`chev-${blockId}`);
+  if(!body || !chevron) return;
+  const isOpen = body.classList.toggle('open');
+  chevron.classList.toggle('open', isOpen);
+}
+
+function mp_expandAll(){
+  document.querySelectorAll('#mpAppBody .event-body').forEach(b => b.classList.add('open'));
+  document.querySelectorAll('#mpAppBody .chevron').forEach(c => c.classList.add('open'));
+}
+function mp_collapseAll(){
+  document.querySelectorAll('#mpAppBody .event-body').forEach(b => b.classList.remove('open'));
+  document.querySelectorAll('#mpAppBody .chevron').forEach(c => c.classList.remove('open'));
+}
+
+function mp_renderSkeleton(blockId, eventId, url, headend, format){
+  return `
+    <div class="event-block" id="${blockId}">
+      <div class="event-header" onclick="mp_toggleBlock('${blockId}')">
+        <span class="event-id-badge">EVENT</span><span class="event-id-text">${escHtml(eventId)}</span>
+        <div class="event-header-meta">
+          <span class="tag tag-headend">${headend}</span><span class="tag tag-format">${format}</span><span class="tag tag-profile">${mp_selectedProfile}</span>
+          <span class="status-dot loading" id="sdot-${blockId}"></span>
+        </div>
+        <span class="chevron open" id="chev-${blockId}">▼</span>
+      </div>
+      <div class="event-body open" id="body-${blockId}">
+        <div class="url-row">
+          <span class="url-label">URL</span><span class="url-text" title="${escHtml(url)}">${escHtml(url)}</span>
+          <div class="url-actions"><button class="action-btn" onclick="event.stopPropagation();mp_copyToClipboard('${escHtml(url)}',this,'URL')">⎘ Copy URL</button></div>
+        </div>
+        <div class="skeleton-block"><div class="skeleton" style="width:55%"></div><div class="skeleton" style="width:88%"></div><div class="skeleton" style="width:72%"></div><div class="skeleton" style="width:91%"></div><div class="skeleton" style="width:60%"></div><div class="skeleton" style="width:80%"></div></div>
+      </div>
+    </div>`;
+}
+
+function mp_updateBlock(blockId, eventId, url, headend, format, masterResult, childResults){
+  const block = document.getElementById(blockId);
+  const dot = document.getElementById(`sdot-${blockId}`);
+  const body = document.getElementById(`body-${blockId}`);
+  if(!block || !dot || !body) return;
+
+  const anyOk = masterResult.ok || (childResults.video && childResults.video.ok) || (childResults.audio && childResults.audio.ok);
+  const allOk = masterResult.ok && (!childResults.video || childResults.video.ok) && (!childResults.audio || childResults.audio.ok);
+
+  dot.className = allOk ? 'status-dot success' : anyOk ? 'status-dot partial' : 'status-dot error';
+  if(!anyOk){ block.classList.add('has-error'); block.querySelector('.event-id-badge').classList.add('error-badge'); }
+
+  const tabs = [];
+  const panels = [];
+  const masterStatus = masterResult.ok ? 'tab-success' : 'tab-error';
+  tabs.push(`<div class="manifest-tab active ${masterStatus}" id="tab-${blockId}-master" onclick="mp_switchTab('${blockId}','master')"><span class="tab-dot"></span> Master</div>`);
+  panels.push(mp_buildManifestPanel(blockId, 'master', eventId, format, masterResult, true));
+
+  if(format === 'HLS'){
+    if(childResults.video !== undefined){
+      const vStatus = childResults.video?.ok ? 'tab-success' : 'tab-error';
+      tabs.push(`<div class="manifest-tab ${vStatus}" id="tab-${blockId}-video" onclick="mp_switchTab('${blockId}','video')"><span class="tab-dot"></span> Video Child</div>`);
+      panels.push(mp_buildManifestPanel(blockId, 'video', eventId, format, childResults.video || { ok:false, error:'Could not resolve video child URL.' }, false));
+    }
+    if(childResults.audio !== undefined){
+      const aStatus = childResults.audio?.ok ? 'tab-success' : 'tab-error';
+      tabs.push(`<div class="manifest-tab ${aStatus}" id="tab-${blockId}-audio" onclick="mp_switchTab('${blockId}','audio')"><span class="tab-dot"></span> Audio Child</div>`);
+      panels.push(mp_buildManifestPanel(blockId, 'audio', eventId, format, childResults.audio || { ok:false, error:'Could not resolve audio child URL.' }, false));
+    }
+  }
+  body.innerHTML = `
+    <div class="url-row">
+      <span class="url-label">URL</span><span class="url-text" title="${escHtml(url)}">${escHtml(url)}</span>
+      <div class="url-actions"><button class="action-btn" onclick="event.stopPropagation();mp_copyToClipboard('${escHtml(url)}',this,'URL')">⎘ Copy URL</button></div>
+    </div>
+    <div class="manifest-tabs-wrapper"><div class="manifest-tab-bar">${tabs.join('')}</div>${panels.join('')}</div>`;
+}
+
+async function mp_generateManifests(){
+  const rawInput = document.getElementById('mpEventIdInput').value;
+  const headend = document.getElementById('mpHeadendSelect').value;
+  const format = document.getElementById('mpFormatSelect').value;
+  const eventIds = mp_parseEventIds(rawInput);
+
+  if(eventIds.length === 0){ showToast('Please enter at least one Event ID.', 'error'); return; }
+  if(!mp_URL_TEMPLATES[headend]?.[format]){ showToast(`${format} is not supported for ${headend}.`, 'error'); return; }
+
+  const btn = document.getElementById('mpGenerateBtn');
+  const spinner = document.getElementById('mpBtnSpinner');
+  const btnText = document.getElementById('mpBtnText');
+  btn.disabled = true; btn.classList.add('loading'); spinner.style.display = 'block'; btnText.textContent = 'Fetching…';
+
+  Object.keys(mp_manifestStore).forEach(k => delete mp_manifestStore[k]);
+  const jobs = eventIds.map((id, i) => ({ index: i, blockId: `mp-block-${i}`, eventId: id, url: mp_buildUrl(id, headend, format) }));
+  const profileLabel = mp_selectedProfile === 'all' ? 'Default' : mp_selectedProfile;
+  const appBody = document.getElementById('mpAppBody');
+  appBody.innerHTML = `
+    <div class="results-bar">
+      <div class="results-bar-left">
+        <span class="results-count">${eventIds.length} Event${eventIds.length > 1 ? 's' : ''}</span>
+        <div class="results-meta-tags">
+          <span class="tag tag-headend">${headend}</span><span class="tag tag-format">${format}</span><span class="tag tag-profile">${profileLabel}</span>
+        </div>
+      </div>
+      <div class="results-bar-right">
+        <button class="icon-btn" onclick="mp_expandAll()">⊞ Expand All</button><button class="icon-btn" onclick="mp_collapseAll()">⊟ Collapse All</button>
+      </div>
+    </div>
+    ${jobs.map(j => mp_renderSkeleton(j.blockId, j.eventId, j.url, headend, format)).join('')}`;
+
+  const results = await Promise.allSettled(jobs.map(async job => {
+    const masterResult = await mp_fetchManifest(job.url);
+    let childResults = {};
+    if(masterResult.ok && format === 'HLS'){
+      const childUrls = mp_parseHlsChildren(masterResult.content, job.url);
+      const [videoResult, audioResult] = await Promise.all([
+        childUrls.video ? mp_fetchManifest(childUrls.video) : Promise.resolve(null),
+        childUrls.audio ? mp_fetchManifest(childUrls.audio) : Promise.resolve(null),
+      ]);
+      if(childUrls.video !== null) childResults.video = videoResult;
+      if(childUrls.audio !== null) childResults.audio = audioResult;
+    }
+    mp_updateBlock(job.blockId, job.eventId, job.url, headend, format, masterResult, childResults);
+    return { masterResult, childResults };
+  }));
+
+  const succeeded = results.filter(r => r.status === 'fulfilled' && r.value?.masterResult?.ok).length;
+  const failed = eventIds.length - succeeded;
+  if(failed === 0) showToast(`All ${succeeded} manifest${succeeded > 1 ? 's' : ''} fetched successfully.`, 'success');
+  else if(succeeded === 0) showToast(`All ${failed} requests failed. Check URLs or CORS.`, 'error');
+  else showToast(`${succeeded} succeeded · ${failed} failed.`, 'info');
+
+  btn.disabled = false; btn.classList.remove('loading'); spinner.style.display = 'none'; btnText.textContent = '⚡ Generate';
+}
+
+document.getElementById('mpEventIdInput').addEventListener('keydown', e => {
+  if((e.ctrlKey || e.metaKey) && e.key === 'Enter') mp_generateManifests();
+});
+
+// ═══════════════════════════════════════════
 // INIT — page load
 // ═══════════════════════════════════════════
 window.addEventListener('load',()=>{
-
-  // 1. Restore theme
   const savedTheme=localStorage.getItem(LS_THEME);
   if(savedTheme) applyTheme(savedTheme);
-
-  // 2. FIX #1: Restore manually added tools from localStorage
   restoreManualTools();
-
-  // 3. FIX #3: Restore playback state
   restorePBState();
-
-  // 4. Check for shared session in URL — auto switch to playback
   const params=new URLSearchParams(window.location.search);
   if(params.get('pbsession')){
     const pbBtn=document.getElementById('tab-btn-playback');
     if(pbBtn) switchTab('playback',pbBtn);
   } else {
-    // 5. FIX #3: Restore last active tab — stays on playback after refresh
     restoreActiveTab();
   }
+  // Initialize Manifest Puller
+  mp_onHeadendChange();
 });
 </script>
 
